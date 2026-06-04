@@ -826,29 +826,7 @@ lookup belowMarkWawRehContext {
     sub @wawRehFinals @diacritics @belowSingleBases [uni0650 uni064D]' lookup subKasraK ;
 } belowMarkWawRehContext;
 
-# Component D: Prototype 2 — micro-kashida insertion before waw/reh (NOT wired into calt)
-# Tested for completeness; see measurement report in commit message.
-lookup insLittleBeforeWaw {
-  lookupflag 0;
-    sub uniFEEE by uni0640.1 uniFEEE ;
-    sub uni0648 by uni0640.1 uni0648 ;
-    sub uniFEAE by uni0640.1 uniFEAE ;
-    sub uniFEAD by uni0640.1 uniFEAD ;
-    sub uniFEAF by uni0640.1 uniFEAF ;
-    sub uniFEB0 by uni0640.1 uniFEB0 ;
-    sub uni0631.alt by uni0640.1 uni0631.alt ;
-    sub uni0631 by uni0640.1 uni0631 ;
-    sub uniFE86 by uni0640.1 uniFE86 ;
-} insLittleBeforeWaw;
-
-lookup belowMarkKashidaContext {
-  lookupflag 0;
-  # For RTL: the "lookahead" of the waw/reh goes LEFTWARD (lower stream index).
-  # In the stream: ... kasra(N-2) base(N-1) waw(N) ...
-  # So the lookahead of waw looks: LA[0]=base(N-1), LA[1]=kasra(N-2)
-  # Pattern A: sub [kasra] [base] [waw/reh]' (base+kasra in lookahead of waw)
-    sub [uni0650 uni064D] @belowSingleBases [uniFEEE uni0648 uniFEAE uniFEAD uniFEAF uniFEB0 uni0631.alt uni0631 uniFE86]' lookup insLittleBeforeWaw ;
-} belowMarkKashidaContext;
+# Component D: below-mark fix uses the shifted-kasra GSUB via subKasraK / belowMarkWawRehContext.
 
 lookup elongation {
   lookupflag 0;

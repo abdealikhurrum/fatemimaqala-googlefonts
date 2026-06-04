@@ -29,6 +29,7 @@ def run(font, fixture):
     return out
 
 if __name__ == "__main__":
-    font = sys.argv[1] if len(sys.argv) > 1 else None
+    font = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
+        os.path.dirname(__file__), "..", "fonts", "FatemiMaqala-Regular.ttf")
     fixture = os.path.join(os.path.dirname(__file__), "regression_words.json")
     print(json.dumps(run(font, fixture), ensure_ascii=False, indent=2))
