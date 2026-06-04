@@ -8,6 +8,7 @@ languagesystem cyrl dflt;
 languagesystem latn dflt;
 languagesystem latn TRK ;
 
+include(FatemiMaqala-Regular.ufo/kaaf_classes.fea);
 
 # GSUB 
 
