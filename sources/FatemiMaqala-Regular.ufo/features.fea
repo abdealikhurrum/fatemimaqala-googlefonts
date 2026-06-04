@@ -766,29 +766,30 @@ lookup longlaamContext {
 	\kaafDouble.medi ]' ;
 } longlaamContext;
 
-# REMOVED: insertWideTatweelBeforeKaaf (single-wide x1) — defined but never referenced;
-# insertWideTatweelX2BeforeKaaf (x2) is used by kaafCollideWideContext instead.
-
-lookup insertWideTatweelX2BeforeKaaf {
-  lookupflag 0;
-    sub uniFEDC by uni0640.3 uni0640.3 uniFEDC ;
-} insertWideTatweelX2BeforeKaaf;
-
 lookup insertLittleTatweelBeforeKaaf {
   lookupflag 0;
     sub uniFEDC by uni0640.1 uniFEDC ;
 } insertLittleTatweelBeforeKaaf;
 
-# Marked: connecting base + above-mark(s) + medial kaaf -> WIDE tatweel x2.
-# Double-mark rule first (wins when two marks present); single-mark also uses x2 (single-wide
-# leaves residual collisions on clearTop/dotted bases — reverted to x2 for both).
+lookup insertLongTatweelBeforeKaaf {
+  lookupflag 0;
+    sub uniFEDC by uni0640.3 uniFEDC ;
+} insertLongTatweelBeforeKaaf;
+
+lookup insertLongShortTatweelBeforeKaaf {
+  lookupflag 0;
+    sub uniFEDC by uni0640.3 uni0640.1 uniFEDC ;
+} insertLongShortTatweelBeforeKaaf;
+
+# Marked: connecting base + above-mark(s) + medial kaaf -> tatweel insertion.
+# Double-mark rule first (wins when two marks present); single-mark uses single-long (890u).
 # Do NOT IgnoreMarks; the mark is matched explicitly, so unmarked words never widen.
 lookup kaafCollideWideContext {
   lookupflag 0;
     sub [@kaafClearTop @kaafDotted @kaafLongAsc] @aboveMarks @aboveMarks
-        uniFEDC' lookup insertWideTatweelX2BeforeKaaf ;
+        uniFEDC' lookup insertLongShortTatweelBeforeKaaf ;
     sub [@kaafClearTop @kaafDotted @kaafLongAsc] @aboveMarks
-        uniFEDC' lookup insertWideTatweelX2BeforeKaaf ;
+        uniFEDC' lookup insertLongTatweelBeforeKaaf ;
 } kaafCollideWideContext;
 
 # Unmarked long-ascender before medial kaaf -> LITTLE tatweel ("as good as joined").
