@@ -15,3 +15,8 @@ def test_componentB_connecting_kaaf_clears():
     assert res["kaaf_dotted"]["kaaf_above"] == 0, res["kaaf_dotted"]
     assert res["kaaf_longAsc"]["kaaf_above"] == 0, res["kaaf_longAsc"]
     assert res["clean"]["kaaf_above"] == 0 and res["clean"]["belowmark_wawreh"] == 0
+
+def test_componentC_nonjoin_kaaf_clears():
+    res = build_and_regress()
+    assert res["kaaf_nonJoin"]["kaaf_above"] == 0, res["kaaf_nonJoin"]
+    assert res["clean"]["kaaf_above"] == 0

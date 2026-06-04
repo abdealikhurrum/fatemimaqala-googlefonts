@@ -43,7 +43,29 @@ LONG_ASC = {  # ل ط ظ + kaaf forms (kaaf-before-kaaf)
     "kaaf_named": ["kaafDouble"],                 # double-story kaaf variant
 }
 ABOVE_MARKS = ["uni064B","uni064C","uni064E","uni064F","uni0651","uni0652","uni0653","uni0670"]
-NONJOIN = ["uniFE8E","uniFEAE","uniFEEE","uniFEAA","uniFEAC","uniFEB0","uniFE82","uniFE84","uniFE88","uniFE8A"]
+NONJOIN = [
+    # Arabic Presentation Forms — final and isolated forms of non-joining letters
+    # alef family
+    "uniFE8E","uniFE8D","uniFE8C","uniFE8B","uniFE8A","uniFE89",
+    "uniFE88","uniFE87","uniFE86","uniFE85","uniFE84","uniFE83","uniFE82","uniFE81",
+    # waw family
+    "uniFEEE","uniFEED",
+    # dal / dhal / thal
+    "uniFEAA","uniFEA9","uniFEAC","uniFEAB",
+    # reh / zay
+    "uniFEAE","uniFEAD","uniFEB0","uniFEAF",
+    # Base Unicode forms (produced by HarfBuzz Arabic shaping for non-joining chars)
+    "uni0627","uni0622","uni0623","uni0625","uni0671",  # alef forms
+    "uni0648","uni0624",                                 # waw
+    "uni062F","uni0630",                                 # dal / thal
+    "uni0631","uni0632","uni0691","uni0698",             # reh / zay variants
+    "uni06D2","uni06D3",                                 # yeh barree
+    # Ligature finals that end with a non-joining form (reh/waw/dal side)
+    # Covers: hamza+reh/zay, beh+reh/zay, teh+reh/zay, theh+reh/zay,
+    #         noon+reh/zay, yeh+reh/zay, etc.
+    "uniFC6A","uniFC6B","uniFC64","uniFC65","uniFC70","uniFC71","uniFC76","uniFC77",
+    "uniFC8A","uniFC8B","uniFC91","uniFC92",
+]
 
 def variants(tt, seeds):
     """All glyph names that are `seed` or `seed.<suffix>` present in the font."""
@@ -69,7 +91,7 @@ def main():
         "kaafDotted":   build(tt, DOTTED),
         "kaafLongAsc":  build(tt, LONG_ASC),
         "aboveMarks":   [n for n in ABOVE_MARKS if n in names],
-        "nonJoinFinals":[n for n in NONJOIN if n in names],
+        "nonJoinFinals": variants(tt, NONJOIN),  # also picks up .short/.alt variants
     }
     for k, v in classes.items():
         assert v, f"class @{k} is empty"

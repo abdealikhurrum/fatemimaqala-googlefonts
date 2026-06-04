@@ -773,31 +773,17 @@ lookup insertLittleTatweelBeforeKaaf {
     sub uniFEDC by uni0640.1 uniFEDC ;
 } insertLittleTatweelBeforeKaaf;
 
-lookup insertWideAfterInitKaaf {
-  lookupflag 0;
-    sub uniFEDB by uni0640.3 uniFEDB ;
-} insertWideAfterInitKaaf;
-
 # Marked: connecting base + above-mark(s) + medial kaaf -> WIDE tatweel x2.
+# Double-mark rule first (wins when two marks present); single-mark also uses x2 (single-wide
+# leaves residual collisions on clearTop/dotted bases — reverted to x2 for both).
 # Do NOT IgnoreMarks; the mark is matched explicitly, so unmarked words never widen.
 lookup kaafCollideWideContext {
   lookupflag 0;
-    sub [@kaafClearTop @kaafDotted @kaafLongAsc] @aboveMarks
-        uniFEDC' lookup insertWideTatweelX2BeforeKaaf ;
     sub [@kaafClearTop @kaafDotted @kaafLongAsc] @aboveMarks @aboveMarks
         uniFEDC' lookup insertWideTatweelX2BeforeKaaf ;
+    sub [@kaafClearTop @kaafDotted @kaafLongAsc] @aboveMarks
+        uniFEDC' lookup insertWideTatweelX2BeforeKaaf ;
 } kaafCollideWideContext;
-
-# Initial kaaf near above-marks: insert wide tatweel on the arm side.
-# Case A: mark is in the backtrack (visually to the right = higher buffer index),
-#         i.e. on the letter the kaaf arm reaches into.
-# Case B: mark is in the lookahead (visually to the left = lower buffer index),
-#         i.e. the kaaf already has a mark that sits above its arm.
-lookup kaafInitCollideContext {
-  lookupflag 0;
-    sub @aboveMarks uniFEDB' lookup insertWideAfterInitKaaf ;
-    sub uniFEDB' lookup insertWideAfterInitKaaf @aboveMarks ;
-} kaafInitCollideContext;
 
 # Unmarked long-ascender before medial kaaf -> LITTLE tatweel ("as good as joined").
 lookup kaafLongAscLittleContext {
@@ -1670,7 +1656,6 @@ feature calt {
       lookup longlaamContext;
       lookup kaafCollideWideContext;
       lookup kaafLongAscLittleContext;
-      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1690,7 +1675,6 @@ feature calt {
       lookup longlaamContext;
       lookup kaafCollideWideContext;
       lookup kaafLongAscLittleContext;
-      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1708,7 +1692,6 @@ feature calt {
       lookup longlaamContext;
       lookup kaafCollideWideContext;
       lookup kaafLongAscLittleContext;
-      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1726,7 +1709,6 @@ feature calt {
       lookup longlaamContext;
       lookup kaafCollideWideContext;
       lookup kaafLongAscLittleContext;
-      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1744,7 +1726,6 @@ feature calt {
       lookup longlaamContext;
       lookup kaafCollideWideContext;
       lookup kaafLongAscLittleContext;
-      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1762,7 +1743,6 @@ feature calt {
       lookup longlaamContext;
       lookup kaafCollideWideContext;
       lookup kaafLongAscLittleContext;
-      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -7642,8 +7622,23 @@ lookup spaceBeforeAlefHamza {
   pos \uni0631.alt \uni0625 320;
 } spaceBeforeAlefHamza;
 
+# Initial kaaf (uniFEDB) collision spacing.
+# Non-joining finals immediately precede uniFEDB (initial kaaf) with no connectors.
+# A mark on the non-joiner OR on the letter following kaaf can collide with kaaf's arm.
+# Pattern A (mark between non-join and kaaf in buffer):
+#   chained-context: @nonJoinFinals @aboveMarks uniFEDB' value
+# Pattern B (mark on the letter logically after kaaf, e.g. fatha on ذ in ذَكرناهم):
+#   pair kern the non-joiner directly before kaaf: @nonJoinFinals uniFEDB value
+#   (fires unconditionally when non-joiner precedes kaaf; a small gap is acceptable even
+#    without marks, since this glyph pair always has a visual break anyway)
+lookup spaceBeforeInitKaaf {
+  pos @nonJoinFinals @aboveMarks uniFEDB' 500;
+  pos @nonJoinFinals uniFEDB' 500;
+} spaceBeforeInitKaaf;
+
 feature kern {
   lookup spaceBeforeAlefHamza;
+  lookup spaceBeforeInitKaaf;
 
  script DFLT;
      language dflt ;
