@@ -7624,16 +7624,12 @@ lookup spaceBeforeAlefHamza {
 
 # Initial kaaf (uniFEDB) collision spacing.
 # Non-joining finals immediately precede uniFEDB (initial kaaf) with no connectors.
-# A mark on the non-joiner OR on the letter following kaaf can collide with kaaf's arm.
+# A mark on the non-joiner can collide with kaaf's arm; widen ONLY when a mark is present.
 # Pattern A (mark between non-join and kaaf in buffer):
 #   chained-context: @nonJoinFinals @aboveMarks uniFEDB' value
-# Pattern B (mark on the letter logically after kaaf, e.g. fatha on ذ in ذَكرناهم):
-#   pair kern the non-joiner directly before kaaf: @nonJoinFinals uniFEDB value
-#   (fires unconditionally when non-joiner precedes kaaf; a small gap is acceptable even
-#    without marks, since this glyph pair always has a visual break anyway)
+# Unconditional widening (no @aboveMarks guard) was removed — it over-widened unmarked words.
 lookup spaceBeforeInitKaaf {
   pos @nonJoinFinals @aboveMarks uniFEDB' 500;
-  pos @nonJoinFinals uniFEDB' 500;
 } spaceBeforeInitKaaf;
 
 feature kern {
