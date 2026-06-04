@@ -20,3 +20,8 @@ def test_componentC_nonjoin_kaaf_clears():
     res = build_and_regress()
     assert res["kaaf_nonJoin"]["kaaf_above"] == 0, res["kaaf_nonJoin"]
     assert res["clean"]["kaaf_above"] == 0
+
+def test_componentD_belowmark_clears():
+    res = build_and_regress()
+    assert res["belowmark_wawreh"]["belowmark_wawreh"] == 0, res["belowmark_wawreh"]
+    assert res["clean"]["belowmark_wawreh"] == 0

@@ -10,7 +10,15 @@ languagesystem latn TRK ;
 
 include(FatemiMaqala-Regular.ufo/kaaf_classes.fea);
 
-# GSUB 
+# Component D: glyph classes for below-mark vs waw/reh context.
+# @belowSingleBases: all base glyphs from kharoSingle_belowSingle (can carry a below-mark).
+# @diacritics: vowel marks that may appear between a base and the following waw/reh in the stream.
+# @wawRehFinals: non-joining waw/reh forms whose bowl/tail can collide with a below-mark on the preceding base.
+@belowSingleBases = [uni0621 uni0623 uni0624 uni0625 uni0626 uni0627 uni0628 uni0629 uni062A uni062B uni062C uni062D uni062E uni062F uni0630 uni0631 uniFEAD uni0632 uniFEAF uni0633 uni0634 uni0635 uni0636 uni0637 uni0638 uni0639 uni063A uni0640 uni0640.1 uni0641 uni0642 uni0643 uni0644 uni0645 NameMe.1114728 uni0646 uni0647 uni06BE uni06C0 uni06C1 uni06C3 NameMe.1114729 uni0648 uni0649 uni064A uni066E uni0679 uni067E uni0686 uni0688 uni0691 uniFB8C uni0691.alt uni0698 uniFB8A uni0698.alt uni06A4 uni06A9 uni06AF uni06BA uni06C2 uni06CC uni06D2 uni06D3 uni06D5 uniFB56 uniFB57 uniFB58 uniFB58.lowbottom pehDouble.init.lowbottom uniFB59 uniFB59.lowbottom pehDouble.medi.lowbottom uniFB67 uniFB68 uniFB68.lowtop ttehDouble.init.lowtop uniFB69 uniFB69.hightop ttehDouble.medi.hightop uniFB6A uniFB6B uniFB6C uniFB6D veh uniFB7A uniFB7B uniFB7C uniFB7D uniFB89 uniFB8B uniFB8D uniFB8E uniFB8F uniFB90 uniFB91 uniFB92 uniFB93 uniFB94 uniFB95 uniFB9F uniFBA4 uniFBA5 uni06C2.fina uniFBA6 uniFBA7 uniFBA8.alt uniFBA9 uniFBAA uniFBAB uniFBAC uniFBAD uniFBAE uniFBAF uniFBB1 uniFBFC uniFEA7 uniFEA8 uniFEAA uniFEB4 uniFEB7 uniFEB8 uniFEBC uniFEBF uniFEC0 uniFEC1 uniFEC2 uniFEC4 uniFEC7 uniFEC8 uniFEDE uniFEE5 uniFEEF seenDouble.medi saadDouble.medi daadDouble.init daadDouble.medi taaDouble.fina taaDouble.medi zaaDouble.init zaaDouble.medi taaDouble daad.medi.hightop daad.medi.lowtop uniFBFD uniFE80 uniFE81 uniFE83 uniFE84 uniFE85 uniFE86 uniFE87 uniFE88 uniFE89 uniFE8A uniFE8B uniFE8B.lowtop uniFE8C uniFE8C.hightop uniFE8D uniFE8E uniFE8F uniFE90 uniFE91 uniFE91.lowbottom uniFE92 uniFE93 uniFE94 uniFE95 uniFE96 uniFE97 uniFE97.lowtop uniFE98 uniFE98.hightop uniFE99 thehDouble uniFE9A thehDouble.fina uniFE9B thehDouble.init uniFE9B.lowtop theh.init.lowtop thehDouble.init.lowbottom thehDouble.init.lowtop uniFE9C thehDouble.medi uniFE9C.hightop theh.medi.hightop thehDouble.medi.lowbottom thehDouble.medi.hightop uniFE9D uniFE9E uniFE9F uniFEA0 uniFEA1 haaDouble uniFEA2 haaDouble.fina uniFEA3 uniFEA4 haaDouble.init haaDouble.medi uniFEA5 uniFEA6 uniFEA9 uniFEAB uniFEAC uniFEAE uniFEB0 uniFEB1 seenDouble uniFEB2 seenDouble.fina uniFEB3 seenDouble.init uniFEB5 uniFEB6 uniFEB9 saadDouble uniFEBA saadDouble.fina uniFEBB saadDouble.init uniFEBD daadDouble uniFEBE daadDouble.fina uniFEC3 taaDouble.init uniFEC5 zaaDouble uniFEC6 zaaDouble.fina zerLigaZaa uniFEC9 uniFECA uniFECB uniFECC uniFECD uniFECE uniFECF uniFED0 uniFED1 uniFED2 uniFED3 uniFED3.lowtop uniFED4 uniFED4.lowtop uniFED5 uniFED6 uniFED7 uniFED8 uniFED9 kaafDouble uniFEDA kaafDouble.fina uniFEDB kaafDouble.init uniFEDC kaafDouble.medi uniFEDD uniFEDF uniFEE0 uniFEE1 uniFEE2 uniFEE3 uniFEE4 uniFEE6 uniFEE7 uniFEE7.lowtop uniFEE8 uniFEE8.hightop uniFEE9 uniFEEA uniFEEB uniFEEC uniFEED uniFEEE uniFEF0 uniFEF1 uniFEF2 uniFEF3 uniFEF3.lowbottom uniFEF4 uniFEF4.lowbottom uniFE83.short uniFE84.short uni066E.fina uni066E.init uni066E.medi tehmarbutagoal.fina uniFEAD.alt uni06A1 uni066F uniFB9E.urd uni0640.3 uniFB8C.alt uniFB8A.alt uniFE87.short uniFEAF.alt uniFBA8 uniFE92.lowbottom uni0631.alt uni0632.alt];
+@diacritics = [uni064B uni064C uni064D uni064E uni064F uni0650 uni0651 uni0652 uni0653 uni0654 uni0655 uni0656 uni0657 uni0658 uni0670 thinkharozer thinkharozabar uni06E4 uniE818 uniE82A uniE82B uniE82C uniE82D NameMe.1455 NameMe.1456 uni0612 jalaalahtashdeed.liga];
+@wawRehFinals = [uniFEEE uni0648 uniFEAE uniFEAD uniFEAF uniFEB0 uni0631.alt uni0631 uniFE86];
+
+# GSUB
 
 
 lookup tildeToMadda {
@@ -758,10 +766,8 @@ lookup longlaamContext {
 	\kaafDouble.medi ]' ;
 } longlaamContext;
 
-lookup insertWideTatweelBeforeKaaf {
-  lookupflag 0;
-    sub uniFEDC by uni0640.3 uniFEDC ;
-} insertWideTatweelBeforeKaaf;
+# REMOVED: insertWideTatweelBeforeKaaf (single-wide x1) — defined but never referenced;
+# insertWideTatweelX2BeforeKaaf (x2) is used by kaafCollideWideContext instead.
 
 lookup insertWideTatweelX2BeforeKaaf {
   lookupflag 0;
@@ -790,6 +796,59 @@ lookup kaafLongAscLittleContext {
   lookupflag IgnoreMarks;
     sub @kaafLongAsc uniFEDC' lookup insertLittleTatweelBeforeKaaf ;
 } kaafLongAscLittleContext;
+
+# Component D: below-mark vs waw/reh fix (Prototype 1 — shifted-kasra GSUB variant)
+# When a kasra/kasratan precedes a following waw/reh glyph, swap to the .k variant
+# whose _belowSingle anchor is shifted +120 (rightward in design space = leftward on screen),
+# moving the rendered mark left and away from the waw/reh bowl/tail.
+lookup subKasraK {
+  lookupflag 0;
+    sub uni0650 by uni0650.k ;
+    sub uni064D by uni064D.k ;
+} subKasraK;
+
+lookup belowMarkWawRehContext {
+  lookupflag 0;
+  # For RTL Arabic, the glyph stream runs LEFT-TO-RIGHT (visual order).
+  # Marks appear before their base glyphs in the stream.
+  # The waw/reh that causes the collision appears AFTER (higher stream index, rightward)
+  # the letter carrying the kasra.
+  # In RTL, the waw/reh cluster has a LOWER cluster number (comes earlier in Arabic reading
+  # but appears further RIGHT on screen, and therefore has a HIGHER stream position index).
+  #
+  # Stream pattern for بِنُحُوسِها: alef heh [kasra](pos2) [nun](pos3) [waw](pos4) ...
+  # Pattern A: waw is 2 positions to the RIGHT (higher stream index) of the kasra
+  # Pattern B: waw is 3 positions to the RIGHT (with an extra diacritic between base and waw)
+  #
+  # FEA for RTL processes the lookahead as going LEFTWARD (lower stream indices).
+  # So we need to put the base and waw in the BACKTRACK (using prefix notation):
+    sub @wawRehFinals @belowSingleBases [uni0650 uni064D]' lookup subKasraK ;
+    sub @wawRehFinals @diacritics @belowSingleBases [uni0650 uni064D]' lookup subKasraK ;
+} belowMarkWawRehContext;
+
+# Component D: Prototype 2 — micro-kashida insertion before waw/reh (NOT wired into calt)
+# Tested for completeness; see measurement report in commit message.
+lookup insLittleBeforeWaw {
+  lookupflag 0;
+    sub uniFEEE by uni0640.1 uniFEEE ;
+    sub uni0648 by uni0640.1 uni0648 ;
+    sub uniFEAE by uni0640.1 uniFEAE ;
+    sub uniFEAD by uni0640.1 uniFEAD ;
+    sub uniFEAF by uni0640.1 uniFEAF ;
+    sub uniFEB0 by uni0640.1 uniFEB0 ;
+    sub uni0631.alt by uni0640.1 uni0631.alt ;
+    sub uni0631 by uni0640.1 uni0631 ;
+    sub uniFE86 by uni0640.1 uniFE86 ;
+} insLittleBeforeWaw;
+
+lookup belowMarkKashidaContext {
+  lookupflag 0;
+  # For RTL: the "lookahead" of the waw/reh goes LEFTWARD (lower stream index).
+  # In the stream: ... kasra(N-2) base(N-1) waw(N) ...
+  # So the lookahead of waw looks: LA[0]=base(N-1), LA[1]=kasra(N-2)
+  # Pattern A: sub [kasra] [base] [waw/reh]' (base+kasra in lookahead of waw)
+    sub [uni0650 uni064D] @belowSingleBases [uniFEEE uni0648 uniFEAE uniFEAD uniFEAF uniFEB0 uni0631.alt uni0631 uniFE86]' lookup insLittleBeforeWaw ;
+} belowMarkKashidaContext;
 
 lookup elongation {
   lookupflag 0;
@@ -1661,6 +1720,7 @@ feature calt {
       lookup RehSpaceContext;
       lookup hehGoalForms;
       lookup jalalahZabrContext;
+      lookup belowMarkWawRehContext;
 
  script arab;
      language dflt ;
@@ -1680,6 +1740,7 @@ feature calt {
       lookup RehSpaceContext;
       lookup hehGoalForms;
       lookup jalalahZabrContext;
+      lookup belowMarkWawRehContext;
      language ARA  exclude_dflt;
       lookup bottomExchange;
       lookup topExchange;
@@ -1697,6 +1758,7 @@ feature calt {
       lookup RehSpaceContext;
       lookup hehGoalForms;
       lookup jalalahZabrContext;
+      lookup belowMarkWawRehContext;
      language FAR  exclude_dflt;
       lookup bottomExchange;
       lookup topExchange;
@@ -1714,6 +1776,7 @@ feature calt {
       lookup RehSpaceContext;
       lookup hehGoalForms;
       lookup jalalahZabrContext;
+      lookup belowMarkWawRehContext;
      language PAS  exclude_dflt;
       lookup bottomExchange;
       lookup topExchange;
@@ -1731,6 +1794,7 @@ feature calt {
       lookup RehSpaceContext;
       lookup hehGoalForms;
       lookup jalalahZabrContext;
+      lookup belowMarkWawRehContext;
      language URD  exclude_dflt;
       lookup bottomExchange;
       lookup topExchange;
@@ -1748,6 +1812,7 @@ feature calt {
       lookup RehSpaceContext;
       lookup hehGoalForms;
       lookup jalalahZabrContext;
+      lookup belowMarkWawRehContext;
 } calt;
 
 feature ss01 {
@@ -4707,6 +4772,9 @@ lookup kernHorizontalKerninglookup5 {
   markClass [\uni0656 ] <anchor 103 381> @zer;
   markClass [\uni064D ] <anchor 203 -640> @belowSingle;
   markClass [\uni0650 ] <anchor 222 -659> @belowSingle;
+  # Component D: below-mark vs waw/reh fix — shifted variants (anchor x +120 = moves mark left)
+  markClass [\uni0650.k] <anchor 342 -659> @belowSingle;
+  markClass [\uni064D.k] <anchor 323 -640> @belowSingle;
   markClass [\uni0655 ] <anchor 186 -348> @belowSingle;
   markClass [\thinkharozer ] <anchor 328 1630> @belowSingle;
   markClass [\uni0656 ] <anchor 164 300> @belowSingle;
