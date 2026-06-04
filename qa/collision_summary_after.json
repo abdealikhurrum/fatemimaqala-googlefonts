@@ -1,0 +1,1156 @@
+{
+  "font": "final.ttf",
+  "rows_scanned": 1831770,
+  "px": 200,
+  "unique_marked_words": 150000,
+  "sample_words": 150000,
+  "seed": 1234,
+  "margin_units": 35,
+  "same_cluster_marks": true,
+  "total_collisions": 3007,
+  "by_glyph_pair": [
+    {
+      "mark": "uni064E",
+      "neighbor": "uni0652",
+      "count": 333,
+      "examples": [
+        "نَيْلُها",
+        "أَنْضَر",
+        "وَبِوجْنَتَيْهِ",
+        "الْمَزارُ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uni064E",
+      "count": 332,
+      "examples": [
+        "نَيْلُها",
+        "أَنْضَر",
+        "وَبِوجْنَتَيْهِ",
+        "الْمَزارُ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni064E",
+      "count": 204,
+      "examples": [
+        "فَيُداسُ",
+        "لَمُوثَق",
+        "فَتُضحِي",
+        "فَزُرْ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uni064F",
+      "count": 204,
+      "examples": [
+        "فَيُداسُ",
+        "لَمُوثَق",
+        "فَتُضحِي",
+        "فَزُرْ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni064E",
+      "count": 124,
+      "examples": [
+        "مُخَيِّلٌ",
+        "لمَيِّتِهِ",
+        "البَيِّعاتِ",
+        "مُتَأَثِّرا"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uni0651",
+      "count": 124,
+      "examples": [
+        "مُخَيِّلٌ",
+        "لمَيِّتِهِ",
+        "البَيِّعاتِ",
+        "مُتَأَثِّرا"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEEE",
+      "count": 104,
+      "examples": [
+        "فودِّع",
+        "مُتَوَقِّدَة",
+        "لِوِدِّهِ",
+        "أخُوَّتِهِ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEAD",
+      "count": 103,
+      "examples": [
+        "العُذْرَةِ",
+        "سدرةِ",
+        "لصدرهِ",
+        "المشورةِ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uniFEDB",
+      "count": 96,
+      "examples": [
+        "كَمَجلوحِ",
+        "كَمَتْنِهِ",
+        "أَسْلاَكِهَا",
+        "الأَكْمَلِيَّ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni0652",
+      "count": 95,
+      "examples": [
+        "الْمُعَافِي",
+        "الْمُسْتَوْفِزُ",
+        "الْمُقَدَّمَا",
+        "الْمُنَزَّلُ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uni064F",
+      "count": 95,
+      "examples": [
+        "الْمُعَافِي",
+        "الْمُسْتَوْفِزُ",
+        "الْمُقَدَّمَا",
+        "الْمُنَزَّلُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEAE",
+      "count": 86,
+      "examples": [
+        "لِحَرِّهِ",
+        "وَبِالحَرَّةِ",
+        "يُرَدِّدْ",
+        "تُرَدِّدْ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uniFEDB",
+      "count": 69,
+      "examples": [
+        "حرَّكتَهُ",
+        "يَتَحَرَّكونَ",
+        "للرِّكاب",
+        "كمّيات"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uniFEDB",
+      "count": 61,
+      "examples": [
+        "كَمُصَلصِلٍ",
+        "كَمُذهَبَةِ",
+        "كَمُفرَدٍ",
+        "كمُشُتكينها"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uni0651",
+      "count": 56,
+      "examples": [
+        "تَغَنَّيْتِ",
+        "مَحَلّْ",
+        "خيمّْ",
+        "ضَلّْ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni0652",
+      "count": 56,
+      "examples": [
+        "تَغَنَّيْتِ",
+        "مَحَلّْ",
+        "خيمّْ",
+        "ضَلّْ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFE86",
+      "count": 52,
+      "examples": [
+        "مُؤمِّنُ",
+        "مُؤَمِّلا",
+        "وَمُؤَمِّلٌ",
+        "فَيُؤَدِّبوهُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni0631.alt",
+      "count": 46,
+      "examples": [
+        "وَرائِبٌ",
+        "رَاتِبْ",
+        "وَرائِكا",
+        "أَرائِكَ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uniFE83.short",
+      "count": 36,
+      "examples": [
+        "أَيَأنَسُ",
+        "أَيَفْرَحُ",
+        "أَيَلحاني",
+        "أَيَرحَلُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFECA",
+      "count": 35,
+      "examples": [
+        "تستَمِع",
+        "وَضُيِّعَ",
+        "أُضيِّع",
+        "وَمرابِعُ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uniFE83.short",
+      "count": 35,
+      "examples": [
+        "وَأَيَّةَ",
+        "أَيُّهاذا",
+        "أَيَّدَت",
+        "أَيَّدَتهُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEF3",
+      "count": 30,
+      "examples": [
+        "يُثِبْنِي",
+        "لغايتِه",
+        "رايتِهِ",
+        "وَرؤيَتِهِ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFE83.short",
+      "count": 28,
+      "examples": [
+        "أَيْأَسِ",
+        "وأَيْقَظَتْ",
+        "أَيْتَمْتِهَا",
+        "أَيْنِ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni064F",
+      "count": 27,
+      "examples": [
+        "بُيِّنَا",
+        "يُرَبِّبُنا",
+        "بُيِّضَ",
+        "الِّحُلى"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni0651",
+      "count": 27,
+      "examples": [
+        "بُيِّنَا",
+        "يُرَبِّبُنا",
+        "بُيِّضَ",
+        "الِّحُلى"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni064F",
+      "count": 27,
+      "examples": [
+        "فُيُولُ",
+        "فُيُولُ",
+        "اُنُوفُ",
+        "اُنُوفُ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uni064B",
+      "count": 21,
+      "examples": [
+        "بالْأًَقْلاَمِ",
+        "الأَيًّامُ",
+        "خًَرِب",
+        "لَستًَ"
+      ]
+    },
+    {
+      "mark": "uni064B",
+      "neighbor": "uni064E",
+      "count": 21,
+      "examples": [
+        "بالْأًَقْلاَمِ",
+        "الأَيًّامُ",
+        "خًَرِب",
+        "لَستًَ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFEF7",
+      "count": 21,
+      "examples": [
+        "الأرْحَبِيَّةِ",
+        "الأرْزَاءِ",
+        "الأيْكِ",
+        "الأرْوَعُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni0648",
+      "count": 18,
+      "examples": [
+        "وَوُدِّ",
+        "وَودِّي",
+        "ووَدِّعيني",
+        "وَدِّعا"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEB0",
+      "count": 18,
+      "examples": [
+        "الزَّمِيلا",
+        "بَزَّةِ",
+        "أَعِزَّتِهِ",
+        "وبعزِّهِ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni0632.alt",
+      "count": 18,
+      "examples": [
+        "زائِلٍ",
+        "زَائِلَهْ",
+        "الأرْزَاءِ",
+        "زائِدُ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uniFEDC",
+      "count": 17,
+      "examples": [
+        "بحيِّكُمُ",
+        "محبِّكُم",
+        "بِظِلِّكُما",
+        "مفكّكا"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni0623",
+      "count": 17,
+      "examples": [
+        "وَرَأيُهُنَّ",
+        "أيُّوبٍ",
+        "أيُفْلِتُ",
+        "أبُخلاً"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uniFE83.short",
+      "count": 15,
+      "examples": [
+        "أَيُشبِه",
+        "أَيُولَدُ",
+        "رَأْيُكُما",
+        "أَيُطيقُ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni064B",
+      "count": 15,
+      "examples": [
+        "شِتاًُ",
+        "يائساًُ",
+        "وُصُولًُ",
+        "يُفهَمًُ"
+      ]
+    },
+    {
+      "mark": "uni064B",
+      "neighbor": "uni064F",
+      "count": 15,
+      "examples": [
+        "شِتاًُ",
+        "يائساًُ",
+        "وُصُولًُ",
+        "يُفهَمًُ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uniFEFB",
+      "count": 15,
+      "examples": [
+        "وِلايَتَهُ",
+        "لِوِلايَةٍ",
+        "الوِلايَه",
+        "الايَاسَينِ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni0651",
+      "count": 14,
+      "examples": [
+        "جِنِّيَّةٍ",
+        "جِنِّيَّةٍ",
+        "ضَبِّيّةٌ",
+        "ضَبِّيّةٌ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uniFE84.short",
+      "count": 13,
+      "examples": [
+        "وَبِأَيِّهِم",
+        "فَأُيِّدَ",
+        "فَأَيَّكُمُ",
+        "يَتَأَيَّد"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFEAE",
+      "count": 13,
+      "examples": [
+        "مُبَطِرَّةٍ",
+        "مَرَدٍّ",
+        "وغرَّةٍ",
+        "مُغَرِّدٍ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni064D",
+      "count": 13,
+      "examples": [
+        "بِمِثْلٍِ",
+        "أَسْعَدٍِ",
+        "جَدٍِّ",
+        "المَحاسِنٍِ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uni0650",
+      "count": 13,
+      "examples": [
+        "بِمِثْلٍِ",
+        "أَسْعَدٍِ",
+        "جَدٍِّ",
+        "المَحاسِنٍِ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFE84.short",
+      "count": 12,
+      "examples": [
+        "بِأَيْدِي",
+        "بأَيْلةَ",
+        "فأَيْقَنْتُ",
+        "بأَيْسرِ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni0650",
+      "count": 12,
+      "examples": [
+        "لحِبِّه",
+        "لحِبِّه",
+        "بِسَاكِنِهِ",
+        "بِسَاكِنِهِ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uniFEDC",
+      "count": 12,
+      "examples": [
+        "مُلكَكُم",
+        "كَكِتَابِ",
+        "شَكَكْتَ",
+        "كَكَأسِ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uniFE82",
+      "count": 11,
+      "examples": [
+        "تَآيَت",
+        "فَآجتَهِد",
+        "فَآمَنَ",
+        "التَّآليفِ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFEDB",
+      "count": 10,
+      "examples": [
+        "كَوْكَبانِ",
+        "وَالتَّرْكِيبِ",
+        "البِرْكَةِ",
+        "كُوْبٌ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uniFEDC",
+      "count": 9,
+      "examples": [
+        "المُحكّما",
+        "سُلُوكُكُمُ",
+        "المُحكَما",
+        "تركُكُما"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFECE",
+      "count": 9,
+      "examples": [
+        "بِسابِغ",
+        "وَسَوابِغُ",
+        "السّوابِغِ",
+        "وَسَوَابِغُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEAF",
+      "count": 8,
+      "examples": [
+        "المركُوزَةِ",
+        "زمِّيت",
+        "العزازةِ",
+        "تمّوزهِ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uni064E",
+      "count": 8,
+      "examples": [
+        "أَيَختارُ",
+        "أَيَختارُ",
+        "لِمَوْلاَنَا",
+        "لِمَوْلاَنَا"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uni0623",
+      "count": 7,
+      "examples": [
+        "وأيْقَنُوا",
+        "أرْجَاءِ",
+        "أيْنَا",
+        "أيْهمٍ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEAD.alt",
+      "count": 6,
+      "examples": [
+        "وَالمارِدِ",
+        "مارِدِ",
+        "بالطاردِ",
+        "وَالبَارِدِ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uniFE8E",
+      "count": 6,
+      "examples": [
+        "التغايُرِ",
+        "التَخايُلُ",
+        "طايُركُم",
+        "فَمايُبالي"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uni0622",
+      "count": 5,
+      "examples": [
+        "وَآلَمُ",
+        "آلَمَ",
+        "وَآثَارُهُ",
+        "آثَرتِ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni0627",
+      "count": 5,
+      "examples": [
+        "يُزايُلُني",
+        "وتزايُداً",
+        "تَزايُلِ",
+        "تَزَايُدُ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni064C",
+      "count": 5,
+      "examples": [
+        "مُرٌُّ",
+        "نُيٌوبها",
+        "كَلِفٌُ",
+        "وكلٌُّ"
+      ]
+    },
+    {
+      "mark": "uni064C",
+      "neighbor": "uni064F",
+      "count": 5,
+      "examples": [
+        "مُرٌُّ",
+        "نُيٌوبها",
+        "كَلِفٌُ",
+        "وكلٌُّ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uniFED7",
+      "count": 5,
+      "examples": [
+        "قُمُطُ",
+        "قُمُدَّاً",
+        "نَرقُمُها",
+        "قُمُوعُها"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni0651",
+      "count": 5,
+      "examples": [
+        "الشَِّرْكَ",
+        "الرَِّيِّ",
+        "أَرَثَِّ",
+        "مُضَعفَِّهِ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni0650",
+      "count": 5,
+      "examples": [
+        "الشَِّرْكَ",
+        "الرَِّيِّ",
+        "أَرَثَِّ",
+        "مُضَعفَِّهِ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni0625",
+      "count": 5,
+      "examples": [
+        "أإيّايَ",
+        "إيِّاه",
+        "إِيَّاكِ",
+        "وَإيَّاهُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni062D",
+      "count": 5,
+      "examples": [
+        "تلوِّح",
+        "يُوَحْوِحُ",
+        "وأنوِّحُ",
+        "الملوِحُ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "NameMe.1820",
+      "count": 5,
+      "examples": [
+        "ذَاكِىِ",
+        "ذَكِىَّ",
+        "مُزَكّى",
+        "تَتَزَكّى"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uni0622",
+      "count": 4,
+      "examples": [
+        "آلُكَ",
+        "وآلُهُ",
+        "آنُفاً",
+        "وَآنُفٍ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uniFEF7",
+      "count": 4,
+      "examples": [
+        "لأيِّهِما",
+        "لأيّامِهِمْ",
+        "لأيّام",
+        "الأيّامُ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEF4.lowbottom",
+      "count": 4,
+      "examples": [
+        "حَبيْبِكِ",
+        "وصَبِيبِهِ",
+        "وَصَبيبِهِ",
+        "حَبِيبِنَا"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEF4",
+      "count": 3,
+      "examples": [
+        "أَولَيتِني",
+        "رَمَيتِني",
+        "قضِيَّتِكم"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEAF.alt",
+      "count": 3,
+      "examples": [
+        "بالأزْدِ",
+        "بِاِزدِحامٍ",
+        "الازدِ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFC70",
+      "count": 3,
+      "examples": [
+        "وَالمُتَرَدِّدِ",
+        "متَرَدِّداً",
+        "المتردِّدِ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFEEE",
+      "count": 3,
+      "examples": [
+        "أبوَّةٍ",
+        "بمسودٍّ",
+        "صُوَّةٍ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uni0625",
+      "count": 3,
+      "examples": [
+        "إيَاكَ",
+        "إِيَالَةُ",
+        "إِيَوَانَ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFEB0",
+      "count": 3,
+      "examples": [
+        "وَعزَّةٍ",
+        "بِزَّةٍ",
+        "هَزَّةٍ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uniFEFB",
+      "count": 3,
+      "examples": [
+        "لايُصيبُ",
+        "لايُتَّهَم",
+        "لايُفيدُ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uni0631.alt",
+      "count": 3,
+      "examples": [
+        "وَآراءٍ",
+        "وأراءٍ",
+        "ازدِرَاءٍ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uni064B",
+      "count": 2,
+      "examples": [
+        "بالْأًَقْلاَمِ",
+        "أًنْتَ"
+      ]
+    },
+    {
+      "mark": "uni064B",
+      "neighbor": "uni0652",
+      "count": 2,
+      "examples": [
+        "بالْأًَقْلاَمِ",
+        "أًنْتَ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "NameMe.1824",
+      "count": 2,
+      "examples": [
+        "وَترْكي",
+        "وترْكي"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uniFEF7",
+      "count": 2,
+      "examples": [
+        "واْلأيَامُ",
+        "الأيَادِي"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uniFE87.short",
+      "count": 2,
+      "examples": [
+        "وإيَّاي",
+        "وإيَّا"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFC4B",
+      "count": 2,
+      "examples": [
+        "النارِنجُ",
+        "الإفرِنج"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni062E",
+      "count": 2,
+      "examples": [
+        "مُسْتَصْرِخِ",
+        "فرِّخ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uni0648",
+      "count": 2,
+      "examples": [
+        "وتَزَوُّدٍ",
+        "مَتأَوِّدٍ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "NameMe.1824",
+      "count": 2,
+      "examples": [
+        "شُرَكَيِّ",
+        "الرَكي"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni062C",
+      "count": 2,
+      "examples": [
+        "تُوِّجَ",
+        "مُتَبَوِّجِ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "NameMe.1822.1",
+      "count": 2,
+      "examples": [
+        "وأَنكى",
+        "وَأَبكَى"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFE8E",
+      "count": 1,
+      "examples": [
+        "بالْأًَقْلاَمِ"
+      ]
+    },
+    {
+      "mark": "uni064B",
+      "neighbor": "NameMe.1824",
+      "count": 1,
+      "examples": [
+        "ًكي"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uni0622",
+      "count": 1,
+      "examples": [
+        "آيْرُوز"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFEAF",
+      "count": 1,
+      "examples": [
+        "لمُرَزَّءٍ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uniFE84",
+      "count": 1,
+      "examples": [
+        "بألّا"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "uniFEF5",
+      "count": 1,
+      "examples": [
+        "الآيَةَ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFE92",
+      "count": 1,
+      "examples": [
+        "النَبَأِ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFE91",
+      "count": 1,
+      "examples": [
+        "بأِزمّةٍ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFEDB",
+      "count": 1,
+      "examples": [
+        "ذَِكيَا"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uni063A",
+      "count": 1,
+      "examples": [
+        "إِغْ"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni0623",
+      "count": 1,
+      "examples": [
+        "وَإأِلّا"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFC65",
+      "count": 1,
+      "examples": [
+        "مُشمئزَّةٍ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uni0632.alt",
+      "count": 1,
+      "examples": [
+        "الأرزاءٍ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFEFB",
+      "count": 1,
+      "examples": [
+        "لاِيْقَاظِهِ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "uniFE84.short",
+      "count": 1,
+      "examples": [
+        "نَأْيُكَ"
+      ]
+    },
+    {
+      "mark": "uni064F",
+      "neighbor": "NameMe.1824",
+      "count": 1,
+      "examples": [
+        "واترُكي"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFC71",
+      "count": 1,
+      "examples": [
+        "معتزَّةٍ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFEAD",
+      "count": 1,
+      "examples": [
+        "مَورَّدٍ"
+      ]
+    },
+    {
+      "mark": "uni0650",
+      "neighbor": "uniFC96",
+      "count": 1,
+      "examples": [
+        "وَسَمِّيَي"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFED7",
+      "count": 1,
+      "examples": [
+        "قُمْريَّاً"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "uniFEF9",
+      "count": 1,
+      "examples": [
+        "والإِيْرادُ"
+      ]
+    },
+    {
+      "mark": "uni0652",
+      "neighbor": "NameMe.1820",
+      "count": 1,
+      "examples": [
+        "أَزْكَى"
+      ]
+    },
+    {
+      "mark": "uni064C",
+      "neighbor": "uniFE82",
+      "count": 1,
+      "examples": [
+        "أَظْآرٌ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFEAD.alt",
+      "count": 1,
+      "examples": [
+        "لفاردٍ"
+      ]
+    },
+    {
+      "mark": "uni064D",
+      "neighbor": "uniFC70",
+      "count": 1,
+      "examples": [
+        "مفترَّةٍ"
+      ]
+    },
+    {
+      "mark": "uni064E",
+      "neighbor": "NameMe.1825",
+      "count": 1,
+      "examples": [
+        "المَنكي"
+      ]
+    },
+    {
+      "mark": "uni0651",
+      "neighbor": "uni0622",
+      "count": 1,
+      "examples": [
+        "آنّآ"
+      ]
+    }
+  ]
+}
