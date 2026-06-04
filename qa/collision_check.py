@@ -34,6 +34,7 @@ class CollisionDetector:
             self.marks = {n2g[g] for g, c in gd.classDefs.items() if c == 3}
         self.data = open(font_path, "rb").read()
         self.face = hb.Face(self.data)
+        self.ft = freetype.Face(self.path)
 
     def collisions(self, text, px=600, margin_units=35, min_pixels=4,
                    same_cluster_marks=False):
@@ -41,7 +42,7 @@ class CollisionDetector:
         fnt = hb.Font(self.face); fnt.scale = (self.UPM, self.UPM)
         buf = hb.Buffer(); buf.add_str(text); buf.guess_segment_properties()
         hb.shape(fnt, buf, {})
-        ft = freetype.Face(self.path); ft.set_char_size(int(px * 64))
+        ft = self.ft; ft.set_char_size(int(px * 64))
         sc = px / self.UPM
         k = max(1, int(round(margin_units * px / self.UPM)))
         glyphs = []; penx = 0.0; base_y = px * 2.0
