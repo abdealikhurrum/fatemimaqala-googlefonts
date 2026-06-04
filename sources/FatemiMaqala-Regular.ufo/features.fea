@@ -758,6 +758,53 @@ lookup longlaamContext {
 	\kaafDouble.medi ]' ;
 } longlaamContext;
 
+lookup insertWideTatweelBeforeKaaf {
+  lookupflag 0;
+    sub uniFEDC by uni0640.3 uniFEDC ;
+} insertWideTatweelBeforeKaaf;
+
+lookup insertWideTatweelX2BeforeKaaf {
+  lookupflag 0;
+    sub uniFEDC by uni0640.3 uni0640.3 uniFEDC ;
+} insertWideTatweelX2BeforeKaaf;
+
+lookup insertLittleTatweelBeforeKaaf {
+  lookupflag 0;
+    sub uniFEDC by uni0640.1 uniFEDC ;
+} insertLittleTatweelBeforeKaaf;
+
+lookup insertWideAfterInitKaaf {
+  lookupflag 0;
+    sub uniFEDB by uni0640.3 uniFEDB ;
+} insertWideAfterInitKaaf;
+
+# Marked: connecting base + above-mark(s) + medial kaaf -> WIDE tatweel x2.
+# Do NOT IgnoreMarks; the mark is matched explicitly, so unmarked words never widen.
+lookup kaafCollideWideContext {
+  lookupflag 0;
+    sub [@kaafClearTop @kaafDotted @kaafLongAsc] @aboveMarks
+        uniFEDC' lookup insertWideTatweelX2BeforeKaaf ;
+    sub [@kaafClearTop @kaafDotted @kaafLongAsc] @aboveMarks @aboveMarks
+        uniFEDC' lookup insertWideTatweelX2BeforeKaaf ;
+} kaafCollideWideContext;
+
+# Initial kaaf near above-marks: insert wide tatweel on the arm side.
+# Case A: mark is in the backtrack (visually to the right = higher buffer index),
+#         i.e. on the letter the kaaf arm reaches into.
+# Case B: mark is in the lookahead (visually to the left = lower buffer index),
+#         i.e. the kaaf already has a mark that sits above its arm.
+lookup kaafInitCollideContext {
+  lookupflag 0;
+    sub @aboveMarks uniFEDB' lookup insertWideAfterInitKaaf ;
+    sub uniFEDB' lookup insertWideAfterInitKaaf @aboveMarks ;
+} kaafInitCollideContext;
+
+# Unmarked long-ascender before medial kaaf -> LITTLE tatweel ("as good as joined").
+lookup kaafLongAscLittleContext {
+  lookupflag IgnoreMarks;
+    sub @kaafLongAsc uniFEDC' lookup insertLittleTatweelBeforeKaaf ;
+} kaafLongAscLittleContext;
+
 lookup elongation {
   lookupflag 0;
     sub \uniFB58 by \uniFB58 \uni0640.1 ;
@@ -1621,6 +1668,9 @@ feature calt {
       lookup straightrehscontext;
       lookup hamzaunderalefContext;
       lookup longlaamContext;
+      lookup kaafCollideWideContext;
+      lookup kaafLongAscLittleContext;
+      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1638,6 +1688,9 @@ feature calt {
       lookup straightrehscontext;
       lookup hamzaunderalefContext;
       lookup longlaamContext;
+      lookup kaafCollideWideContext;
+      lookup kaafLongAscLittleContext;
+      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1653,6 +1706,9 @@ feature calt {
       lookup straightrehscontext;
       lookup hamzaunderalefContext;
       lookup longlaamContext;
+      lookup kaafCollideWideContext;
+      lookup kaafLongAscLittleContext;
+      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1668,6 +1724,9 @@ feature calt {
       lookup straightrehscontext;
       lookup hamzaunderalefContext;
       lookup longlaamContext;
+      lookup kaafCollideWideContext;
+      lookup kaafLongAscLittleContext;
+      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1683,6 +1742,9 @@ feature calt {
       lookup straightrehscontext;
       lookup hamzaunderalefContext;
       lookup longlaamContext;
+      lookup kaafCollideWideContext;
+      lookup kaafLongAscLittleContext;
+      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
@@ -1698,6 +1760,9 @@ feature calt {
       lookup straightrehscontext;
       lookup hamzaunderalefContext;
       lookup longlaamContext;
+      lookup kaafCollideWideContext;
+      lookup kaafLongAscLittleContext;
+      lookup kaafInitCollideContext;
       lookup ElongContext;
       lookup RehAlefcontext;
       lookup RehSpaceContext;
