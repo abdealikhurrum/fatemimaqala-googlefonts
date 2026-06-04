@@ -1,0 +1,32 @@
+{
+  "kaaf_clearTop": {
+    "kaaf_above": 6,
+    "belowmark_wawreh": 0,
+    "other": 0
+  },
+  "kaaf_dotted": {
+    "kaaf_above": 4,
+    "belowmark_wawreh": 0,
+    "other": 2
+  },
+  "kaaf_longAsc": {
+    "kaaf_above": 5,
+    "belowmark_wawreh": 0,
+    "other": 0
+  },
+  "kaaf_nonJoin": {
+    "kaaf_above": 4,
+    "belowmark_wawreh": 0,
+    "other": 0
+  },
+  "belowmark_wawreh": {
+    "kaaf_above": 0,
+    "belowmark_wawreh": 5,
+    "other": 0
+  },
+  "clean": {
+    "kaaf_above": 0,
+    "belowmark_wawreh": 0,
+    "other": 0
+  }
+}
