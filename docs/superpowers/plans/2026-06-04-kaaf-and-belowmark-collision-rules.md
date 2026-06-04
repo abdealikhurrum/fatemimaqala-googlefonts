@@ -15,8 +15,9 @@
 ## Environment facts (already established — do not re-derive)
 
 - A `.venv` exists at repo root with all build + detector deps installed. Activate with `. .venv/bin/activate` for every step.
-- **Build command (≈3.5s):** `fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf --output-path <OUT>.ttf`
-  - **Do NOT** use raw `ufo2ft.compileTTF` — its output omits fontmake's filters and segfaults FreeType at 600px.
+- **Build command (≈2.7s):** `fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf -a --output-path <OUT>.ttf`
+  - The **`-a` (autohint) flag is REQUIRED.** Plain `fontmake ... -o ttf` (no `-a`) produces an *unhinted* font (no `fpgm`/`prep`/`cvt`) that segfaults FreeType at 600px on certain glyphs in the full fixture. With `-a` the font is hinted (matches the shipped font) and renders safely. ttfautohint-py is bundled with fontmake; no separate binary needed.
+  - **Do NOT** use raw `ufo2ft.compileTTF` — its output also omits filters/hinting and segfaults FreeType at 600px.
 - **Detector is freetype-py-fragile:** creating more than one `freetype.Face` per process segfaults in `load_glyph`. `qa/collision_check.py:collisions()` currently makes a *new* Face on every call → crashes on the 2nd call. **Task 1 fixes this.** The regression harness runs **one font per process**.
 - Feature edits go in `sources/FatemiMaqala-Regular.ufo/features.fea` (the UFO's own file). `sources/features.full.fea` is a separate copy — leave it alone.
 - Confirmed glyphs: `uni0640.1` (adv 270, "little" tatweel), `uni0640.3` (adv 890, "wide"); `uniFEDC` (medial kaaf), `uniFEDB` (initial kaaf). `@aboveSingle`/`@belowSingle` markClasses defined at features.fea ~4662–4681.
@@ -199,7 +200,7 @@ git commit -m "test(qa): collision regression harness + corpus fixture words"
 Run:
 ```bash
 . .venv/bin/activate
-fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf --output-path /tmp/fm_baseline.ttf
+fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf -a --output-path /tmp/fm_baseline.ttf
 python3 qa/collision_regress.py /tmp/fm_baseline.ttf > qa/baseline.json
 cat qa/baseline.json
 ```
@@ -340,7 +341,7 @@ include(kaaf_classes.fea);
 
 - [ ] **Step 4: Verify the font still builds clean with the include**
 
-Run: `. .venv/bin/activate && fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf --output-path /tmp/fm_classes.ttf`
+Run: `. .venv/bin/activate && fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf -a --output-path /tmp/fm_classes.ttf`
 Expected: builds with no feaLib errors (warnings OK). Then `python3 qa/collision_regress.py /tmp/fm_classes.ttf` matches `qa/baseline.json` (classes alone change nothing).
 
 - [ ] **Step 5: Commit**
@@ -368,7 +369,7 @@ ROOT = os.path.dirname(HERE)
 
 def build_and_regress(out="/tmp/fm_comp.ttf"):
     subprocess.run(["fontmake","-u",f"{ROOT}/sources/FatemiMaqala-Regular.ufo",
-                    "-o","ttf","--output-path",out], check=True, capture_output=True)
+                    "-o","ttf","-a","--output-path",out], check=True, capture_output=True)
     r = subprocess.run([sys.executable, f"{HERE}/collision_regress.py", out],
                        check=True, capture_output=True, text=True)
     return json.loads(r.stdout)
@@ -620,7 +621,7 @@ git commit -m "feat: below-mark vs waw/reh fix (Component D) + decision recorded
 Run:
 ```bash
 . .venv/bin/activate
-fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf --output-path /tmp/fm_final.ttf
+fontmake -u sources/FatemiMaqala-Regular.ufo -o ttf -a --output-path /tmp/fm_final.ttf
 python3 qa/collision_census_fast.py /Users/abdealikhurrum/Documents/apcd.csv \
     --column البيت --sample-words 150000 --same-marks --seed 1234 \
     --font /tmp/fm_final.ttf --out qa/collision_summary_after.json
