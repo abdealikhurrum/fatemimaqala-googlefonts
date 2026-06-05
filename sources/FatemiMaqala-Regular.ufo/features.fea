@@ -1458,11 +1458,20 @@ lookup straightRaa {
     sub \uniFEAD by \uniFEAD.alt ;
 } straightRaa;
 
+# NOTE: split from a single lookup that mixed a ligature sub (3->1) and a
+# single sub (1->1) — feaLib (the gftools/GF pipeline) rejects mixed lookup
+# types in one named block. kashidas (single) runs first so the .1 forms
+# exist, then kashidasWide collapses runs of three into the wide .3 kashida.
+# Reference both, in this order, everywhere kashidas was used.
 lookup kashidas {
   lookupflag IgnoreMarks;
-    sub \uni0640.1 \uni0640.1 \uni0640.1  by \uni0640.3;
     sub \uni0640  by \uni0640.1;
 } kashidas;
+
+lookup kashidasWide {
+  lookupflag IgnoreMarks;
+    sub \uni0640.1 \uni0640.1 \uni0640.1  by \uni0640.3;
+} kashidasWide;
 
 lookup pnum {
   lookupflag 0;
@@ -1539,6 +1548,8 @@ feature isol {
      language ARA  exclude_dflt;
       lookup curvyIsolatedRehs;
      language FAR  exclude_dflt;
+      lookup curvyIsolatedRehs;
+     language GUJ  exclude_dflt;
       lookup curvyIsolatedRehs;
      language URD  exclude_dflt;
       lookup curvyIsolatedRehs;
@@ -1646,36 +1657,43 @@ feature rlig {
 
      language dflt ;
       lookup kashidas;
+      lookup kashidasWide;
 
  script DFLT;
      language dflt ;
       lookup honorifics;
       lookup DoublePressLigatures;
       lookup kashidas;
+      lookup kashidasWide;
 
  script arab;
      language dflt ;
       lookup honorifics;
       lookup DoublePressLigatures;
       lookup kashidas;
+      lookup kashidasWide;
      language ARA  exclude_dflt;
       lookup honorifics;
       lookup DoublePressLigatures;
       lookup kashidas;
+      lookup kashidasWide;
      language FAR  exclude_dflt;
       lookup honorifics;
       lookup doublePress;
       lookup DoublePressLigatures;
       lookup kashidas;
+      lookup kashidasWide;
      language GUJ  exclude_dflt;
       lookup honorifics;
       lookup doublePress;
       lookup DoublePressLigatures;
       lookup kashidas;
+      lookup kashidasWide;
      language URD  exclude_dflt;
       lookup honorifics;
       lookup DoublePressLigatures;
       lookup kashidas;
+      lookup kashidasWide;
 } rlig;
 
 feature calt {
