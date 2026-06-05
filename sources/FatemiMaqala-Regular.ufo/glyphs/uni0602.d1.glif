@@ -1,11 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph name="uni0600" format="2">
-  <advance width="712"/>
-  <unicode hex="0600"/>
+<glyph name="uni0602.d1" format="2">
   <outline>
+    <component base="waw.notail" xOffset="-1468"/>
     <component base="uni0640.1" xOffset="-810"/>
     <component base="uni0640.1" xOffset="-540"/>
     <component base="uni0640.1" xOffset="-270"/>
-    <component base="uniFECB"/>
   </outline>
 </glyph>

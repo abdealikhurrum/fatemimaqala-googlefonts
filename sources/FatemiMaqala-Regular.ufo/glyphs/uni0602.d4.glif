@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0602.d4" format="2">
+  <outline>
+    <component base="waw.notail" xOffset="-3898"/>
+    <component base="uni0640.1" xOffset="-3240"/>
+    <component base="uni0640.1" xOffset="-2970"/>
+    <component base="uni0640.1" xOffset="-2700"/>
+    <component base="uni0640.1" xOffset="-2430"/>
+    <component base="uni0640.1" xOffset="-2160"/>
+    <component base="uni0640.1" xOffset="-1890"/>
+    <component base="uni0640.1" xOffset="-1620"/>
+    <component base="uni0640.1" xOffset="-1350"/>
+    <component base="uni0640.1" xOffset="-1080"/>
+    <component base="uni0640.1" xOffset="-810"/>
+    <component base="uni0640.1" xOffset="-540"/>
+    <component base="uni0640.1" xOffset="-270"/>
+  </outline>
+</glyph>
