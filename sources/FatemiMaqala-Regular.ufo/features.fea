@@ -2,7 +2,7 @@ languagesystem DFLT dflt;
 languagesystem arab ARA ;
 languagesystem arab dflt;
 languagesystem arab FAR ;
-languagesystem arab PAS ;
+languagesystem arab GUJ ;
 languagesystem arab URD ;
 languagesystem cyrl dflt;
 languagesystem latn dflt;
@@ -1519,8 +1519,7 @@ feature locl {
       lookup tildeToMadda;
      language FAR  exclude_dflt;
       lookup tildeToMadda;
-      lookup lsdSubs;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup tildeToMadda;
       lookup compatibiltyStyle;
      language URD  exclude_dflt;
@@ -1558,7 +1557,7 @@ feature fina {
       lookup FinalForms;
      language FAR  exclude_dflt;
       lookup FinalForms;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup FinalForms;
      language URD  exclude_dflt;
       lookup FinalForms;
@@ -1577,7 +1576,7 @@ feature medi {
       lookup MedialForms;
      language FAR  exclude_dflt;
       lookup MedialForms;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup MedialForms;
      language URD  exclude_dflt;
       lookup MedialForms;
@@ -1596,7 +1595,7 @@ feature init {
       lookup InitialForms;
      language FAR  exclude_dflt;
       lookup InitialForms;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup InitialForms;
      language URD  exclude_dflt;
       lookup InitialForms;
@@ -1626,7 +1625,7 @@ feature liga {
       lookup specials;
       lookup jalaalahtashdeed;
       lookup standardArabicLigas;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup specials;
       lookup compatibilityRREHddeh;
       lookup jalaalahtashdeed;
@@ -1668,7 +1667,7 @@ feature rlig {
       lookup doublePress;
       lookup DoublePressLigatures;
       lookup kashidas;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup honorifics;
       lookup doublePress;
       lookup DoublePressLigatures;
@@ -1756,7 +1755,7 @@ feature calt {
       lookup hehGoalForms;
       lookup jalalahZabrContext;
       lookup belowMarkWawRehContext;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup bottomExchange;
       lookup topExchange;
       lookup nuktaVariant_to_original;
@@ -1808,7 +1807,7 @@ feature ss01 {
       lookup urduGhunna;
      language FAR  exclude_dflt;
       lookup urduGhunna;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup urduGhunna;
      language URD  exclude_dflt;
       lookup urduGhunna;
@@ -1828,7 +1827,7 @@ feature ss02 {
       lookup straightRaa;
      language FAR  exclude_dflt;
       lookup straightRaa;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup straightRaa;
      language URD  exclude_dflt;
       lookup straightRaa;
@@ -7658,7 +7657,7 @@ feature curs {
       lookup cursCursiveAttachmentinArabiclookup4;
      language FAR  exclude_dflt;
       lookup cursCursiveAttachmentinArabiclookup4;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup cursCursiveAttachmentinArabiclookup4;
      language URD  exclude_dflt;
       lookup cursCursiveAttachmentinArabiclookup4;
@@ -7695,7 +7694,7 @@ feature kern {
       lookup kernHorizontalKerninginArabiclookup5;
      language FAR  exclude_dflt;
       lookup kernHorizontalKerninginArabiclookup5;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup kernHorizontalKerninginArabiclookup5;
      language URD  exclude_dflt;
       lookup kernHorizontalKerninginArabiclookup5;
@@ -7981,7 +7980,7 @@ feature mark {
       lookup kharoLiga_zerLiga;
       lookup kharoLiga_belowLiga;
       lookup kharoLiga_aboveLiga;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup kharoSingle_subSingle;
       lookup kharoSingle_supSingle;
       lookup kharoSingle_zer;
@@ -8025,7 +8024,7 @@ feature mkmk {
      language FAR  exclude_dflt;
       lookup marktomark_belowmark;
       lookup marktomark_abovemark;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup marktomark_belowmark;
       lookup marktomark_abovemark;
      language URD  exclude_dflt;
@@ -8050,7 +8049,7 @@ feature  RQD {
      language FAR  exclude_dflt;
       lookup vkrnVerticalKerninglookup6;
       lookup kernHorizontalKerninglookup9;
-     language PAS  exclude_dflt;
+     language GUJ  exclude_dflt;
       lookup vkrnVerticalKerninglookup6;
       lookup kernHorizontalKerninglookup9;
      language URD  exclude_dflt;
