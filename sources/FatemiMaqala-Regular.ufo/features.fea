@@ -474,10 +474,18 @@ lookup honorifics {
     sub \asciicircum \uniFEBB \uniFECA  by \SA.super;
     sub \asciicircum \uni0635 \uni00A0 \uni0639  by \SA.super;
     # Codepoint sequences the keyboard emits (small high tah/sad + ain).
-    # ZWNJ variants first (longer match): the keyboard puts a ZWNJ between
-    # the small-high letters so non-supporting fonts show them side-by-side.
+    # Tatweel-carried form FIRST (longest): a kashida before EACH small-high
+    # letter, so fonts without these ligatures give both marks a real base
+    # with natural spacing (and no orphan-mark dotted circles). Here the
+    # whole sequence ligates to the same stacked glyph.
+    sub \uni0640 \uni0615 \uni0640 \uni08D6  by \TUS.super;
+    sub \uni0640 \uni08D5 \uni0640 \uni08D6  by \SA.super;
+    # ZWNJ variants (legacy emission): ZWNJ between the small-high letters.
     sub \uni0615 \uni200C \uni08D6  by \TUS.super;
     sub \uni08D5 \uni200C \uni08D6  by \SA.super;
+    # Single mid-tatweel (leading kashida stripped by an editor).
+    sub \uni0615 \uni0640 \uni08D6  by \TUS.super;
+    sub \uni08D5 \uni0640 \uni08D6  by \SA.super;
     sub \uni0615 \uni08D6  by \TUS.super;
     sub \uni08D5 \uni08D6  by \SA.super;
     sub \asciicircum \uniFEDF \uniFECA  by \LA.super;
