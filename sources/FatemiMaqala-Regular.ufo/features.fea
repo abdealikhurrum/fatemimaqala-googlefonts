@@ -1281,11 +1281,11 @@ lookup standardArabicLigas {
 
 lookup latnLigas {
   lookupflag 0;
-    sub \f \f  by \uniFFFFFFFF;
-    sub \f \l  by \uniFFFFFFFF;
-    sub \f \f \l  by \uniFFFFFFFF;
-    sub \f \i  by \uniFFFFFFFF;
-    sub \f \f \i  by \uniFFFFFFFF;
+    sub \f \f  by \f_f;
+    sub \f \l  by \f_l;
+    sub \f \f \l  by \f_f_l;
+    sub \f \i  by \f_i;
+    sub \f \f \i  by \f_f_i;
     sub \f \b  by \f_b;
     sub \f \f \b  by \f_f_b;
     sub \f \k  by \f_k;
@@ -8299,8 +8299,8 @@ feature  RQD {
 	\afii57416.medi_khahfinal.liga \kaaf.init_heh.fina.liga 
 	\afii57420.init_hehfinal.liga \uni0646.init_heh.fina.liga 
 	\afii57418.init_hehfinal.liga \uni064A.init_hehfinal.liga 
-	\afii57418.medi_hehfinal.liga \uni064A.medi_hehfinal.liga \uniFFFFFFFF 
-	\uniFFFFFFFF \uniFFFFFFFF \uniFFFFFFFF \uniFFFFFFFF \f_b \f_f_b \f_k \f_f_k \f_h 
+	\afii57418.medi_hehfinal.liga \uni064A.medi_hehfinal.liga \f_f
+	\f_l \f_f_l \f_i \f_f_i \f_b \f_f_b \f_k \f_f_k \f_h
 	\f_f_h \f_j \f_f_j \T_h \uni0640.1 \uniFB8C.alt \uniFC03 \pehDouble.isol 
 	\pehDouble.fina \pehDouble.init \pehDouble.medi \ttehDouble.isol 
 	\ttehDouble.fina \ttehDouble.init \ttehDouble.medi \tchehDouble.isol 
@@ -8487,11 +8487,11 @@ table GDEF {
   LigatureCaretByPos \uniFC49 752;
   LigatureCaretByPos \uniFC54 1004;
   LigatureCaretByPos \uniFC53 1079;
-  LigatureCaretByPos \uniFFFFFFFF 530;
-  LigatureCaretByPos \uniFFFFFFFF 550;
-  LigatureCaretByPos \uniFFFFFFFF 550 1100;
-  LigatureCaretByPos \uniFFFFFFFF 560;
-  LigatureCaretByPos \uniFFFFFFFF 560 1120;
+  LigatureCaretByPos \f_f 530;
+  LigatureCaretByPos \f_l 550;
+  LigatureCaretByPos \f_f_l 550 1100;
+  LigatureCaretByPos \f_i 560;
+  LigatureCaretByPos \f_f_i 560 1120;
   LigatureCaretByPos \f_b 680;
   LigatureCaretByPos \f_f_b 560 1200;
   LigatureCaretByPos \f_k 600;
