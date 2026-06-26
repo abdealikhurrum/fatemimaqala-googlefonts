@@ -1711,6 +1711,33 @@ feature rlig {
       lookup kashidasWide;
 } rlig;
 
+# Honorific combining-mark ligatures, duplicated into ccmp.
+# These same rules live in the `honorifics` lookup under rlig (left intact),
+# but Word/Uniscribe does not apply rlig over combining marks the way
+# HarfBuzz/CoreText do. ccmp is applied early by ALL shapers (before joining
+# and mark positioning), so the small-high-mark honorific sequences compose in
+# Microsoft Word too. ccmp fires first and consumes the input, so the rlig
+# copies become harmless no-ops for these sequences (CoreText unchanged).
+# Only the combining-mark / tatweel / ZWNJ forms belong here — NOT the
+# caret-prefixed or presentation-form base-letter forms (those depend on the
+# joining features and must stay post-joining in rlig).
+lookup honorificCcmp {
+  lookupflag 0;
+    sub \uni0640 \uni0615 \uni0640 \uni08D6  by \TUS.super;
+    sub \uni0640 \uni08D5 \uni0640 \uni08D6  by \SA.super;
+    sub \uni0615 \uni200C \uni08D6  by \TUS.super;
+    sub \uni08D5 \uni200C \uni08D6  by \SA.super;
+    sub \uni0615 \uni0640 \uni08D6  by \TUS.super;
+    sub \uni08D5 \uni0640 \uni08D6  by \SA.super;
+    sub \uni0615 \uni08D6  by \TUS.super;
+    sub \uni08D5 \uni08D6  by \SA.super;
+} honorificCcmp;
+
+feature ccmp {
+  script arab;
+    lookup honorificCcmp;
+} ccmp;
+
 feature calt {
 
  script DFLT;
@@ -7964,6 +7991,14 @@ lookup latnMarks {
     pos base [uni25CC] <anchor 720 834> mark @latnAbove;
 } latnMarks;
 
+# Dagger alef over an alef (substituted to thinkharozabar): nestle it at the
+# top-right of the alef, top only slightly above the alef's top, instead of
+# floating centred high above.  Added on top of the mark-attachment offset.
+lookup reposition_kharo_alef {
+  lookupflag RightToLeft;
+  pos [uni0627 uniFE8D uniFE8E] [thinkharozabar uni0670]' <200 -535 0 0>;
+} reposition_kharo_alef;
+
 feature mark {
 
  script DFLT;
@@ -7978,6 +8013,7 @@ feature mark {
       lookup kharoLiga_zerLiga;
       lookup kharoLiga_belowLiga;
       lookup kharoLiga_aboveLiga;
+      lookup reposition_kharo_alef;
 
  script arab;
      language dflt ;
@@ -7991,6 +8027,7 @@ feature mark {
       lookup kharoLiga_zerLiga;
       lookup kharoLiga_belowLiga;
       lookup kharoLiga_aboveLiga;
+      lookup reposition_kharo_alef;
      language ARA  exclude_dflt;
       lookup kharoSingle_subSingle;
       lookup kharoSingle_supSingle;
@@ -8002,6 +8039,7 @@ feature mark {
       lookup kharoLiga_zerLiga;
       lookup kharoLiga_belowLiga;
       lookup kharoLiga_aboveLiga;
+      lookup reposition_kharo_alef;
      language FAR  exclude_dflt;
       lookup kharoSingle_subSingle;
       lookup kharoSingle_supSingle;
@@ -8013,6 +8051,7 @@ feature mark {
       lookup kharoLiga_zerLiga;
       lookup kharoLiga_belowLiga;
       lookup kharoLiga_aboveLiga;
+      lookup reposition_kharo_alef;
      language GUJ  exclude_dflt;
       lookup kharoSingle_subSingle;
       lookup kharoSingle_supSingle;
@@ -8024,6 +8063,7 @@ feature mark {
       lookup kharoLiga_zerLiga;
       lookup kharoLiga_belowLiga;
       lookup kharoLiga_aboveLiga;
+      lookup reposition_kharo_alef;
      language URD  exclude_dflt;
       lookup kharoSingle_subSingle;
       lookup kharoSingle_supSingle;
@@ -8035,6 +8075,7 @@ feature mark {
       lookup kharoLiga_zerLiga;
       lookup kharoLiga_belowLiga;
       lookup kharoLiga_aboveLiga;
+      lookup reposition_kharo_alef;
  script latn;
      language dflt ;
       lookup latnMarks;
